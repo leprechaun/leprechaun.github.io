@@ -31,11 +31,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Download helm
-        run: |
-          curl -o helm.tgz https://get.helm.sh/helm-v3.10.0-linux-amd64.tar.gz
-          tar xf helm.tgz
-
       - name: helm repo index
         run: |
           helm repo index ./

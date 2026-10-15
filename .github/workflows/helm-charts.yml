@@ -35,6 +35,11 @@ jobs:
         run: |
           helm repo index ./
 
+      - name: Generate index.html
+        run: |
+          pip install pyyaml
+          python3 scripts/generate_index_html.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
